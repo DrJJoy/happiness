@@ -11,7 +11,7 @@ st.set_page_config(page_title="Happiness Vibration", page_icon="")
 def load_model():
     return pipeline(
         "text-classification",
-        model="./models/bulldog_joy_bert_improved",  # ← your trained model
+        model="models/bulldog_joy_bert_improved"
         return_all_scores=True,
         device=0 if torch.cuda.is_available() else -1
     )
