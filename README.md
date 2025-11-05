@@ -52,7 +52,7 @@
 
 | Purpose | Model | Accuracy |
 |---------|-------|----------|
-| **Baseline** | Multinomial Naive Bayes (interpretable) | **82 %** |
+| **Baseline** | Multinomial Naive Bayes (interpretable) | **76 %** |
 | **Advanced** | Fine-tuned BERT (`bert-base-uncased`) | **76 %** *(latest run)* |
 
 > **Why BERT appears “underperforming”**  
