@@ -1,6 +1,7 @@
 # app.py — HAPPINESS VIBRATION JOY SCORER
 import streamlit as st
 import pandas as pd
+import torch  # ← THIS WAS MISSING
 from transformers import pipeline
 
 st.set_page_config(page_title="Happiness Vibration", page_icon="")
@@ -29,7 +30,7 @@ text = st.text_area(
 if st.button("Analyze Joy"):
     if text.strip():
         # Get all scores
-        results = classifier(text)[0]  # List of 4 dicts: [{'label': 'LABEL_0', 'score': 0.01}, ...]
+        results = classifier(text)[0]  # List of 4 dicts
         
         # Map labels
         joy_map = {
