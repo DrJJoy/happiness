@@ -9,7 +9,8 @@ def load_model():
     return pipeline(
         "text-classification",
         model="DrJJoy/bulldog-joy-bert",  # ← HF model ID
-        return_all_scores=True
+        return_all_scores=True,
+        trust_remote_code=True
     )
 
 classifier = load_model()
